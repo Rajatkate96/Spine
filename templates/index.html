@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book spine Prediction</title>
+</head>
+<body style="background-color: azure;">
+    <h1>RB Spine Calculation</h1>
+
+    <form action="/get_data" method="post">
+        <label>Pages:</label> <input type="number" name="html_pages" <br><br>
+
+        <label>GSM:</label> <input type="number" name="html_gsm" <br><br>
+
+        <label>Binding</label>
+            <input type="radio" name="html_binding" value="paperback"><label>Paperback</label>
+            <input type="radio" name="html_binding" value="hardback"><label>Hardback</label> <br><br>
+
+        <label>Paper: </label>
+        <select name="html_paper">
+            <option value="creme">creme</option>
+            <option value="White">white</option>
+            <option value="Coated_matt">coated_matt</option>
+
+        </select> <br><br>
+
+            <input type="submit" value="Calculate Spine">
+    </form><br>
+    <label>Your Book Spine : </label>{{prediction}}
+</body>
+</html>
